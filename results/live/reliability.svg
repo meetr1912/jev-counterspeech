@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+<rect x="0" y="0" width="640" height="480" fill="#ffffff"/>
+<text x="64" y="24" font-family="sans-serif" font-size="16" font-weight="bold" fill="#111111">Reliability diagram</text>
+<text x="616" y="24" text-anchor="end" font-family="sans-serif" font-size="12" fill="#333333">Brier 0.2440 · ECE 0.3540 · n=10</text>
+<line x1="64.00" y1="40" x2="64.00" y2="424" stroke="#eeeeee" stroke-width="1"/>
+<line x1="64" y1="424.00" x2="616" y2="424.00" stroke="#eeeeee" stroke-width="1"/>
+<line x1="119.20" y1="40" x2="119.20" y2="424" stroke="#eeeeee" stroke-width="1"/>
+<line x1="64" y1="385.60" x2="616" y2="385.60" stroke="#eeeeee" stroke-width="1"/>
+<line x1="174.40" y1="40" x2="174.40" y2="424" stroke="#eeeeee" stroke-width="1"/>
+<line x1="64" y1="347.20" x2="616" y2="347.20" stroke="#eeeeee" stroke-width="1"/>
+<line x1="229.60" y1="40" x2="229.60" y2="424" stroke="#eeeeee" stroke-width="1"/>
+<line x1="64" y1="308.80" x2="616" y2="308.80" stroke="#eeeeee" stroke-width="1"/>
+<line x1="284.80" y1="40" x2="284.80" y2="424" stroke="#eeeeee" stroke-width="1"/>
+<line x1="64" y1="270.40" x2="616" y2="270.40" stroke="#eeeeee" stroke-width="1"/>
+<line x1="340.00" y1="40" x2="340.00" y2="424" stroke="#eeeeee" stroke-width="1"/>
+<line x1="64" y1="232.00" x2="616" y2="232.00" stroke="#eeeeee" stroke-width="1"/>
+<line x1="395.20" y1="40" x2="395.20" y2="424" stroke="#eeeeee" stroke-width="1"/>
+<line x1="64" y1="193.60" x2="616" y2="193.60" stroke="#eeeeee" stroke-width="1"/>
+<line x1="450.40" y1="40" x2="450.40" y2="424" stroke="#eeeeee" stroke-width="1"/>
+<line x1="64" y1="155.20" x2="616" y2="155.20" stroke="#eeeeee" stroke-width="1"/>
+<line x1="505.60" y1="40" x2="505.60" y2="424" stroke="#eeeeee" stroke-width="1"/>
+<line x1="64" y1="116.80" x2="616" y2="116.80" stroke="#eeeeee" stroke-width="1"/>
+<line x1="560.80" y1="40" x2="560.80" y2="424" stroke="#eeeeee" stroke-width="1"/>
+<line x1="64" y1="78.40" x2="616" y2="78.40" stroke="#eeeeee" stroke-width="1"/>
+<line x1="616.00" y1="40" x2="616.00" y2="424" stroke="#eeeeee" stroke-width="1"/>
+<line x1="64" y1="40.00" x2="616" y2="40.00" stroke="#eeeeee" stroke-width="1"/>
+<line x1="64" y1="424" x2="616" y2="40" stroke="#888888" stroke-width="1.5" stroke-dasharray="6 4"/>
+<line x1="64" y1="424" x2="616" y2="424" stroke="#333333" stroke-width="1.5"/>
+<line x1="64" y1="40" x2="64" y2="424" stroke="#333333" stroke-width="1.5"/>
+<text x="64.00" y="440" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333333">0.0</text>
+<text x="56" y="428.00" text-anchor="end" font-family="sans-serif" font-size="10" fill="#333333">0.0</text>
+<text x="119.20" y="440" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333333">0.1</text>
+<text x="56" y="389.60" text-anchor="end" font-family="sans-serif" font-size="10" fill="#333333">0.1</text>
+<text x="174.40" y="440" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333333">0.2</text>
+<text x="56" y="351.20" text-anchor="end" font-family="sans-serif" font-size="10" fill="#333333">0.2</text>
+<text x="229.60" y="440" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333333">0.3</text>
+<text x="56" y="312.80" text-anchor="end" font-family="sans-serif" font-size="10" fill="#333333">0.3</text>
+<text x="284.80" y="440" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333333">0.4</text>
+<text x="56" y="274.40" text-anchor="end" font-family="sans-serif" font-size="10" fill="#333333">0.4</text>
+<text x="340.00" y="440" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333333">0.5</text>
+<text x="56" y="236.00" text-anchor="end" font-family="sans-serif" font-size="10" fill="#333333">0.5</text>
+<text x="395.20" y="440" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333333">0.6</text>
+<text x="56" y="197.60" text-anchor="end" font-family="sans-serif" font-size="10" fill="#333333">0.6</text>
+<text x="450.40" y="440" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333333">0.7</text>
+<text x="56" y="159.20" text-anchor="end" font-family="sans-serif" font-size="10" fill="#333333">0.7</text>
+<text x="505.60" y="440" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333333">0.8</text>
+<text x="56" y="120.80" text-anchor="end" font-family="sans-serif" font-size="10" fill="#333333">0.8</text>
+<text x="560.80" y="440" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333333">0.9</text>
+<text x="56" y="82.40" text-anchor="end" font-family="sans-serif" font-size="10" fill="#333333">0.9</text>
+<text x="616.00" y="440" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333333">1.0</text>
+<text x="56" y="44.00" text-anchor="end" font-family="sans-serif" font-size="10" fill="#333333">1.0</text>
+<rect x="59.52" y="424.00" width="20.00" height="0.00" fill="#2f6feb" fill-opacity="0.20" stroke="#2f6feb" stroke-opacity="0.5" stroke-width="1"/>
+<circle cx="69.52" cy="424.00" r="4" fill="#2f6feb" stroke="#ffffff" stroke-width="1"/>
+<rect x="120.24" y="424.00" width="20.00" height="0.00" fill="#2f6feb" fill-opacity="0.20" stroke="#2f6feb" stroke-opacity="0.5" stroke-width="1"/>
+<circle cx="130.24" cy="424.00" r="4" fill="#2f6feb" stroke="#ffffff" stroke-width="1"/>
+<rect x="208.56" y="40.00" width="20.00" height="384.00" fill="#2f6feb" fill-opacity="0.20" stroke="#2f6feb" stroke-opacity="0.5" stroke-width="1"/>
+<circle cx="218.56" cy="40.00" r="4" fill="#2f6feb" stroke="#ffffff" stroke-width="1"/>
+<rect x="280.32" y="424.00" width="20.00" height="0.00" fill="#2f6feb" fill-opacity="0.20" stroke="#2f6feb" stroke-opacity="0.5" stroke-width="1"/>
+<circle cx="290.32" cy="424.00" r="4" fill="#2f6feb" stroke="#ffffff" stroke-width="1"/>
+<rect x="429.36" y="424.00" width="20.00" height="0.00" fill="#2f6feb" fill-opacity="0.20" stroke="#2f6feb" stroke-opacity="0.5" stroke-width="1"/>
+<circle cx="439.36" cy="424.00" r="4" fill="#2f6feb" stroke="#ffffff" stroke-width="1"/>
+<rect x="440.40" y="424.00" width="20.00" height="0.00" fill="#2f6feb" fill-opacity="0.20" stroke="#2f6feb" stroke-opacity="0.5" stroke-width="1"/>
+<circle cx="450.40" cy="424.00" r="4" fill="#2f6feb" stroke="#ffffff" stroke-width="1"/>
+<rect x="534.24" y="232.00" width="20.00" height="192.00" fill="#2f6feb" fill-opacity="0.20" stroke="#2f6feb" stroke-opacity="0.5" stroke-width="1"/>
+<circle cx="544.24" cy="232.00" r="4" fill="#2f6feb" stroke="#ffffff" stroke-width="1"/>
+<rect x="561.84" y="40.00" width="20.00" height="384.00" fill="#2f6feb" fill-opacity="0.20" stroke="#2f6feb" stroke-opacity="0.5" stroke-width="1"/>
+<circle cx="571.84" cy="40.00" r="4" fill="#2f6feb" stroke="#ffffff" stroke-width="1"/>
+<rect x="406" y="52" width="200" height="54" fill="#ffffff" fill-opacity="0.9" stroke="#cccccc" stroke-width="1"/>
+<line x1="416" y1="66" x2="440" y2="66" stroke="#888888" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="448" y="70" font-family="sans-serif" font-size="10" fill="#333333">Perfect calibration (y = x)</text>
+<rect x="416" y="78" width="18" height="10" fill="#2f6feb" fill-opacity="0.20" stroke="#2f6feb" stroke-opacity="0.5" stroke-width="1"/>
+<text x="448" y="87" font-family="sans-serif" font-size="10" fill="#333333">Empirical rate per bin</text>
+<circle cx="425" cy="97" r="4" fill="#2f6feb" stroke="#ffffff" stroke-width="1"/>
+<text x="448" y="101" font-family="sans-serif" font-size="10" fill="#333333">Bin (mean predicted)</text>
+<text x="340.00" y="466" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#333333">mean predicted probability</text>
+<text x="16" y="232.00" text-anchor="middle" transform="rotate(-90 16 232.00)" font-family="sans-serif" font-size="12" fill="#333333">empirical rate</text>
+</svg>

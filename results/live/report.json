@@ -1,0 +1,1887 @@
+{
+  "meta": {
+    "mode": "live",
+    "stub": null,
+    "seed": 7,
+    "limit": 10,
+    "threshold": 0.65,
+    "draft_mode": "template",
+    "include_public": false,
+    "generated_at": "2026-09-19T02:14:48+00:00",
+    "counts": {
+      "draft": 0,
+      "human_review": 5,
+      "ignore": 2,
+      "report": 3,
+      "refused": 10,
+      "drafted_items": 0
+    },
+    "examples": 10
+  },
+  "calibration": {
+    "count": 10,
+    "brier": 0.24009999999999998,
+    "ece": 0.354,
+    "log_loss": 0.6462424386220855,
+    "baseline_brier": 0.25,
+    "per_question": {
+      "hateful": {
+        "count": 10,
+        "brier": 0.24009999999999998,
+        "ece": 0.354,
+        "log_loss": 0.6462424386220855,
+        "mean_predicted": 0.5780000000000001,
+        "base_rate": 0.4
+      },
+      "targets_protected_group": {
+        "count": 10,
+        "brier": 0.31315,
+        "ece": 0.413,
+        "log_loss": 0.8705182710503875,
+        "mean_predicted": 0.639,
+        "base_rate": 0.3
+      },
+      "has_slur": {
+        "count": 10,
+        "brier": 0.1594,
+        "ece": 0.186,
+        "log_loss": 0.4861373699043122,
+        "mean_predicted": 0.378,
+        "base_rate": 0.4
+      }
+    },
+    "reliability": [
+      {
+        "bin": 0,
+        "count": 1,
+        "mean_predicted": 0.01,
+        "empirical": 0.0
+      },
+      {
+        "bin": 1,
+        "count": 1,
+        "mean_predicted": 0.12,
+        "empirical": 0.0
+      },
+      {
+        "bin": 2,
+        "count": 1,
+        "mean_predicted": 0.28,
+        "empirical": 1.0
+      },
+      {
+        "bin": 3,
+        "count": 0,
+        "mean_predicted": 0.0,
+        "empirical": 0.0
+      },
+      {
+        "bin": 4,
+        "count": 1,
+        "mean_predicted": 0.41,
+        "empirical": 0.0
+      },
+      {
+        "bin": 5,
+        "count": 0,
+        "mean_predicted": 0.0,
+        "empirical": 0.0
+      },
+      {
+        "bin": 6,
+        "count": 1,
+        "mean_predicted": 0.68,
+        "empirical": 0.0
+      },
+      {
+        "bin": 7,
+        "count": 1,
+        "mean_predicted": 0.7,
+        "empirical": 0.0
+      },
+      {
+        "bin": 8,
+        "count": 2,
+        "mean_predicted": 0.87,
+        "empirical": 0.5
+      },
+      {
+        "bin": 9,
+        "count": 2,
+        "mean_predicted": 0.92,
+        "empirical": 1.0
+      }
+    ],
+    "categorical": {
+      "category": {
+        "multiclass_brier": 0.19196000000000002,
+        "cross_entropy": 0.6903284813978295,
+        "accuracy": 0.8,
+        "count": 10
+      },
+      "handling": {
+        "multiclass_brier": 0.7682399999999999,
+        "cross_entropy": 9.860629567166969,
+        "accuracy": 0.1,
+        "count": 10
+      }
+    },
+    "severity_mae": 0.35099999999999987,
+    "severity_brier": 0.012497199999999998,
+    "label_counts": {
+      "0": 6,
+      "1": 4
+    },
+    "note": "Calibration is measured on labeled examples. Brier/ECE describe how well Jev's stated uncertainty matches observed outcomes; they are not an engagement or popularity metric and must not be optimized as one. Every action remains behind a human-review gate."
+  },
+  "gate": {
+    "draft": 0,
+    "human_review": 5,
+    "ignore": 2,
+    "report": 3,
+    "refused": 10,
+    "drafted_items": 0
+  },
+  "items": [
+    {
+      "post_id": "synthetic-0000",
+      "text": "Call me old-fashioned, but [SLUR] is not the worst word for the coastal diaspora.",
+      "triage": {
+        "post_id": "synthetic-0000",
+        "hateful": 0.85,
+        "targets_protected_group": 0.9,
+        "has_slur": 0.88,
+        "severity_dist": {
+          "0": 0.02,
+          "1": 0.03,
+          "2": 0.04,
+          "3": 0.87,
+          "4": 0.04
+        },
+        "severity": 3.88,
+        "category": "slur",
+        "category_probs": {
+          "none": 0.01,
+          "slur": 0.87,
+          "stereotype": 0.03,
+          "dehumanization": 0.0,
+          "othering": 0.09,
+          "threat": 0.0
+        },
+        "handling": "report",
+        "handling_probs": {
+          "ignore": 0.0,
+          "report": 0.73,
+          "reply": 0.0,
+          "human_review": 0.27
+        },
+        "confidence": 0.63,
+        "answers": {
+          "hateful": {
+            "type": "noul",
+            "noul": 0.85
+          },
+          "targets_protected_group": {
+            "type": "noul",
+            "noul": 0.9
+          },
+          "has_slur": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "severity": {
+            "type": "score",
+            "score": 2.89,
+            "confidence": 0.84,
+            "legend": {
+              "0": "1",
+              "1": "2",
+              "2": "3",
+              "3": "4",
+              "4": "5"
+            },
+            "probabilities": {
+              "0": 0.02,
+              "1": 0.03,
+              "2": 0.04,
+              "3": 0.87,
+              "4": 0.04
+            }
+          },
+          "category": {
+            "type": "choice",
+            "choice": "slur",
+            "confidence": 0.84,
+            "probabilities": {
+              "stereotype": 0.03,
+              "threat": 0.0,
+              "dehumanization": 0.0,
+              "slur": 0.87,
+              "none": 0.01,
+              "othering": 0.09
+            }
+          },
+          "handling": {
+            "type": "choice",
+            "choice": "report",
+            "confidence": 0.63,
+            "probabilities": {
+              "ignore": 0.0,
+              "report": 0.73,
+              "human_review": 0.27,
+              "reply": 0.0
+            }
+          }
+        },
+        "meta": {
+          "model": "jev-1.13.0",
+          "latency_ms": 371,
+          "usage": {
+            "input_tokens": 1031,
+            "output_tokens": 180
+          },
+          "request": {
+            "model": "jev-latest",
+            "state": {
+              "task": "Classify one social-media post for hateful, harassing, or dehumanizing content and recommend the safest handling. Classify the text only: do not identify, target, or write about any individual, and do not draft a reply.",
+              "post": {
+                "id": "synthetic-0000",
+                "text": "Call me old-fashioned, but [SLUR] is not the worst word for the coastal diaspora."
+              },
+              "safety": [
+                "Never target, single out, or identify an individual person; judge the content, not people.",
+                "Prefer de-escalation and restore the humanity of any targeted group.",
+                "Never propose mass, automated, or coordinated replies. Any reply is reviewed by a human first.",
+                "When uncertain or when the stakes are high, say so through a flatter distribution."
+              ]
+            },
+            "questions": {
+              "hateful": {
+                "type": "noul",
+                "instructions": "Does this post contain hateful, harassing, or dehumanizing content? Answer with your true probability in [0, 1]. Classify only; do not target anyone."
+              },
+              "targets_protected_group": {
+                "type": "noul",
+                "instructions": "Does the post target a protected group rather than a private individual? Answer with your true probability in [0, 1]."
+              },
+              "has_slur": {
+                "type": "noul",
+                "instructions": "Does the post contain a slur or slur-like targeted epithet? Answer with your true probability in [0, 1]."
+              },
+              "severity": {
+                "type": "score",
+                "instructions": "How severe is the content? Return a probability distribution over the ordered criteria (1 = Not hateful.; 2 = Mild bias, no slur, no threat.; 3 = Clear hateful generalization or othering.; 4 = Slur or dehumanization, no explicit threat.; 5 = Explicit threat or call to violence.). Answer every criterion with your true probability.",
+                "criteria": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ]
+              },
+              "category": {
+                "type": "choice",
+                "instructions": "Which single category best describes the post? Classify the text; do not identify or target any individual.",
+                "criteria": {
+                  "none": "No hateful, harassing, or dehumanizing content.",
+                  "slur": "Contains a slur or slur-like targeted epithet.",
+                  "stereotype": "Asserts a negative generalization about a protected group.",
+                  "dehumanization": "Likens a protected group to animals, vermin, disease, or objects.",
+                  "othering": "Frames a protected group as alien, foreign, or not belonging.",
+                  "threat": "Calls for, encourages, or celebrates violence or harm."
+                }
+              },
+              "handling": {
+                "type": "choice",
+                "instructions": "What is the safest handling? Prefer de-escalation, never propose mass replies, and remember a human decides before any reply is sent.",
+                "criteria": {
+                  "ignore": "Do not engage; no reply and no report.",
+                  "report": "Route to platform trust-and-safety; do not reply publicly.",
+                  "reply": "A respectful counterspeech reply may be appropriate after human review.",
+                  "human_review": "Uncertain or high-stakes; a human must decide before any action."
+                }
+              }
+            }
+          }
+        }
+      },
+      "gate": {
+        "action": "human_review",
+        "reasons": [
+          "confidence 0.63 < threshold 0.65"
+        ],
+        "threshold": 0.65
+      },
+      "candidates": [],
+      "ranking": null,
+      "drafted": false,
+      "note": "confidence 0.63 < threshold 0.65"
+    },
+    {
+      "post_id": "synthetic-0001",
+      "text": "People can say what they want about the Vale settlers; I just prefer to keep my distance.",
+      "triage": {
+        "post_id": "synthetic-0001",
+        "hateful": 0.12,
+        "targets_protected_group": 0.23,
+        "has_slur": 0.04,
+        "severity_dist": {
+          "0": 0.4,
+          "1": 0.52,
+          "2": 0.08,
+          "3": 0.0,
+          "4": 0.0
+        },
+        "severity": 1.6800000000000002,
+        "category": "none",
+        "category_probs": {
+          "none": 0.77,
+          "slur": 0.0,
+          "stereotype": 0.0,
+          "dehumanization": 0.0,
+          "othering": 0.23,
+          "threat": 0.0
+        },
+        "handling": "ignore",
+        "handling_probs": {
+          "ignore": 0.88,
+          "report": 0.02,
+          "reply": 0.01,
+          "human_review": 0.09
+        },
+        "confidence": 0.84,
+        "answers": {
+          "hateful": {
+            "type": "noul",
+            "noul": 0.12
+          },
+          "targets_protected_group": {
+            "type": "noul",
+            "noul": 0.23
+          },
+          "has_slur": {
+            "type": "noul",
+            "noul": 0.04
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.69,
+            "confidence": 0.59,
+            "legend": {
+              "0": "1",
+              "1": "2",
+              "2": "3",
+              "3": "4",
+              "4": "5"
+            },
+            "probabilities": {
+              "0": 0.4,
+              "1": 0.52,
+              "2": 0.08,
+              "3": 0.0,
+              "4": 0.0
+            }
+          },
+          "category": {
+            "type": "choice",
+            "choice": "none",
+            "confidence": 0.72,
+            "probabilities": {
+              "dehumanization": 0.0,
+              "stereotype": 0.0,
+              "slur": 0.0,
+              "othering": 0.23,
+              "none": 0.77,
+              "threat": 0.0
+            }
+          },
+          "handling": {
+            "type": "choice",
+            "choice": "ignore",
+            "confidence": 0.84,
+            "probabilities": {
+              "reply": 0.01,
+              "ignore": 0.88,
+              "human_review": 0.09,
+              "report": 0.02
+            }
+          }
+        },
+        "meta": {
+          "model": "jev-1.13.0",
+          "latency_ms": 167,
+          "usage": {
+            "input_tokens": 1028,
+            "output_tokens": 179
+          },
+          "request": {
+            "model": "jev-latest",
+            "state": {
+              "task": "Classify one social-media post for hateful, harassing, or dehumanizing content and recommend the safest handling. Classify the text only: do not identify, target, or write about any individual, and do not draft a reply.",
+              "post": {
+                "id": "synthetic-0001",
+                "text": "People can say what they want about the Vale settlers; I just prefer to keep my distance."
+              },
+              "safety": [
+                "Never target, single out, or identify an individual person; judge the content, not people.",
+                "Prefer de-escalation and restore the humanity of any targeted group.",
+                "Never propose mass, automated, or coordinated replies. Any reply is reviewed by a human first.",
+                "When uncertain or when the stakes are high, say so through a flatter distribution."
+              ]
+            },
+            "questions": {
+              "hateful": {
+                "type": "noul",
+                "instructions": "Does this post contain hateful, harassing, or dehumanizing content? Answer with your true probability in [0, 1]. Classify only; do not target anyone."
+              },
+              "targets_protected_group": {
+                "type": "noul",
+                "instructions": "Does the post target a protected group rather than a private individual? Answer with your true probability in [0, 1]."
+              },
+              "has_slur": {
+                "type": "noul",
+                "instructions": "Does the post contain a slur or slur-like targeted epithet? Answer with your true probability in [0, 1]."
+              },
+              "severity": {
+                "type": "score",
+                "instructions": "How severe is the content? Return a probability distribution over the ordered criteria (1 = Not hateful.; 2 = Mild bias, no slur, no threat.; 3 = Clear hateful generalization or othering.; 4 = Slur or dehumanization, no explicit threat.; 5 = Explicit threat or call to violence.). Answer every criterion with your true probability.",
+                "criteria": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ]
+              },
+              "category": {
+                "type": "choice",
+                "instructions": "Which single category best describes the post? Classify the text; do not identify or target any individual.",
+                "criteria": {
+                  "none": "No hateful, harassing, or dehumanizing content.",
+                  "slur": "Contains a slur or slur-like targeted epithet.",
+                  "stereotype": "Asserts a negative generalization about a protected group.",
+                  "dehumanization": "Likens a protected group to animals, vermin, disease, or objects.",
+                  "othering": "Frames a protected group as alien, foreign, or not belonging.",
+                  "threat": "Calls for, encourages, or celebrates violence or harm."
+                }
+              },
+              "handling": {
+                "type": "choice",
+                "instructions": "What is the safest handling? Prefer de-escalation, never propose mass replies, and remember a human decides before any reply is sent.",
+                "criteria": {
+                  "ignore": "Do not engage; no reply and no report.",
+                  "report": "Route to platform trust-and-safety; do not reply publicly.",
+                  "reply": "A respectful counterspeech reply may be appropriate after human review.",
+                  "human_review": "Uncertain or high-stakes; a human must decide before any action."
+                }
+              }
+            }
+          }
+        }
+      },
+      "gate": {
+        "action": "ignore",
+        "reasons": [
+          "handling=ignore"
+        ],
+        "threshold": 0.65
+      },
+      "candidates": [],
+      "ranking": null,
+      "drafted": false,
+      "note": "handling=ignore"
+    },
+    {
+      "post_id": "synthetic-0002",
+      "text": "I am not prejudiced, I just think the Northland community could try harder to fit in.",
+      "triage": {
+        "post_id": "synthetic-0002",
+        "hateful": 0.68,
+        "targets_protected_group": 0.63,
+        "has_slur": 0.1,
+        "severity_dist": {
+          "0": 0.01,
+          "1": 0.19,
+          "2": 0.78,
+          "3": 0.02,
+          "4": 0.0
+        },
+        "severity": 2.81,
+        "category": "othering",
+        "category_probs": {
+          "none": 0.0,
+          "slur": 0.0,
+          "stereotype": 0.02,
+          "dehumanization": 0.0,
+          "othering": 0.98,
+          "threat": 0.0
+        },
+        "handling": "report",
+        "handling_probs": {
+          "ignore": 0.05,
+          "report": 0.62,
+          "reply": 0.03,
+          "human_review": 0.3
+        },
+        "confidence": 0.49,
+        "answers": {
+          "hateful": {
+            "type": "noul",
+            "noul": 0.68
+          },
+          "targets_protected_group": {
+            "type": "noul",
+            "noul": 0.63
+          },
+          "has_slur": {
+            "type": "noul",
+            "noul": 0.1
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.82,
+            "confidence": 0.81,
+            "legend": {
+              "0": "1",
+              "1": "2",
+              "2": "3",
+              "3": "4",
+              "4": "5"
+            },
+            "probabilities": {
+              "0": 0.01,
+              "1": 0.19,
+              "2": 0.78,
+              "3": 0.02,
+              "4": 0.0
+            }
+          },
+          "category": {
+            "type": "choice",
+            "choice": "othering",
+            "confidence": 0.97,
+            "probabilities": {
+              "none": 0.0,
+              "threat": 0.0,
+              "stereotype": 0.02,
+              "othering": 0.98,
+              "dehumanization": 0.0,
+              "slur": 0.0
+            }
+          },
+          "handling": {
+            "type": "choice",
+            "choice": "report",
+            "confidence": 0.49,
+            "probabilities": {
+              "ignore": 0.05,
+              "report": 0.62,
+              "human_review": 0.3,
+              "reply": 0.03
+            }
+          }
+        },
+        "meta": {
+          "model": "jev-1.13.0",
+          "latency_ms": 198,
+          "usage": {
+            "input_tokens": 1031,
+            "output_tokens": 180
+          },
+          "request": {
+            "model": "jev-latest",
+            "state": {
+              "task": "Classify one social-media post for hateful, harassing, or dehumanizing content and recommend the safest handling. Classify the text only: do not identify, target, or write about any individual, and do not draft a reply.",
+              "post": {
+                "id": "synthetic-0002",
+                "text": "I am not prejudiced, I just think the Northland community could try harder to fit in."
+              },
+              "safety": [
+                "Never target, single out, or identify an individual person; judge the content, not people.",
+                "Prefer de-escalation and restore the humanity of any targeted group.",
+                "Never propose mass, automated, or coordinated replies. Any reply is reviewed by a human first.",
+                "When uncertain or when the stakes are high, say so through a flatter distribution."
+              ]
+            },
+            "questions": {
+              "hateful": {
+                "type": "noul",
+                "instructions": "Does this post contain hateful, harassing, or dehumanizing content? Answer with your true probability in [0, 1]. Classify only; do not target anyone."
+              },
+              "targets_protected_group": {
+                "type": "noul",
+                "instructions": "Does the post target a protected group rather than a private individual? Answer with your true probability in [0, 1]."
+              },
+              "has_slur": {
+                "type": "noul",
+                "instructions": "Does the post contain a slur or slur-like targeted epithet? Answer with your true probability in [0, 1]."
+              },
+              "severity": {
+                "type": "score",
+                "instructions": "How severe is the content? Return a probability distribution over the ordered criteria (1 = Not hateful.; 2 = Mild bias, no slur, no threat.; 3 = Clear hateful generalization or othering.; 4 = Slur or dehumanization, no explicit threat.; 5 = Explicit threat or call to violence.). Answer every criterion with your true probability.",
+                "criteria": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ]
+              },
+              "category": {
+                "type": "choice",
+                "instructions": "Which single category best describes the post? Classify the text; do not identify or target any individual.",
+                "criteria": {
+                  "none": "No hateful, harassing, or dehumanizing content.",
+                  "slur": "Contains a slur or slur-like targeted epithet.",
+                  "stereotype": "Asserts a negative generalization about a protected group.",
+                  "dehumanization": "Likens a protected group to animals, vermin, disease, or objects.",
+                  "othering": "Frames a protected group as alien, foreign, or not belonging.",
+                  "threat": "Calls for, encourages, or celebrates violence or harm."
+                }
+              },
+              "handling": {
+                "type": "choice",
+                "instructions": "What is the safest handling? Prefer de-escalation, never propose mass replies, and remember a human decides before any reply is sent.",
+                "criteria": {
+                  "ignore": "Do not engage; no reply and no report.",
+                  "report": "Route to platform trust-and-safety; do not reply publicly.",
+                  "reply": "A respectful counterspeech reply may be appropriate after human review.",
+                  "human_review": "Uncertain or high-stakes; a human must decide before any action."
+                }
+              }
+            }
+          }
+        }
+      },
+      "gate": {
+        "action": "human_review",
+        "reasons": [
+          "confidence 0.49 < threshold 0.65"
+        ],
+        "threshold": 0.65
+      },
+      "candidates": [],
+      "ranking": null,
+      "drafted": false,
+      "note": "confidence 0.49 < threshold 0.65"
+    },
+    {
+      "post_id": "synthetic-0003",
+      "text": "Maybe vermin is too strong a word, but you see my point about the Sunfield migrants.",
+      "triage": {
+        "post_id": "synthetic-0003",
+        "hateful": 0.91,
+        "targets_protected_group": 0.91,
+        "has_slur": 0.82,
+        "severity_dist": {
+          "0": 0.01,
+          "1": 0.01,
+          "2": 0.05,
+          "3": 0.9,
+          "4": 0.03
+        },
+        "severity": 3.93,
+        "category": "dehumanization",
+        "category_probs": {
+          "none": 0.0,
+          "slur": 0.0,
+          "stereotype": 0.0,
+          "dehumanization": 1.0,
+          "othering": 0.0,
+          "threat": 0.0
+        },
+        "handling": "report",
+        "handling_probs": {
+          "ignore": 0.0,
+          "report": 0.75,
+          "reply": 0.01,
+          "human_review": 0.24
+        },
+        "confidence": 0.67,
+        "answers": {
+          "hateful": {
+            "type": "noul",
+            "noul": 0.91
+          },
+          "targets_protected_group": {
+            "type": "noul",
+            "noul": 0.91
+          },
+          "has_slur": {
+            "type": "noul",
+            "noul": 0.82
+          },
+          "severity": {
+            "type": "score",
+            "score": 2.94,
+            "confidence": 0.9,
+            "legend": {
+              "0": "1",
+              "1": "2",
+              "2": "3",
+              "3": "4",
+              "4": "5"
+            },
+            "probabilities": {
+              "0": 0.01,
+              "1": 0.01,
+              "2": 0.05,
+              "3": 0.9,
+              "4": 0.03
+            }
+          },
+          "category": {
+            "type": "choice",
+            "choice": "dehumanization",
+            "confidence": 1.0,
+            "probabilities": {
+              "dehumanization": 1.0,
+              "threat": 0.0,
+              "othering": 0.0,
+              "none": 0.0,
+              "stereotype": 0.0,
+              "slur": 0.0
+            }
+          },
+          "handling": {
+            "type": "choice",
+            "choice": "report",
+            "confidence": 0.67,
+            "probabilities": {
+              "human_review": 0.24,
+              "ignore": 0.0,
+              "reply": 0.01,
+              "report": 0.75
+            }
+          }
+        },
+        "meta": {
+          "model": "jev-1.13.0",
+          "latency_ms": 193,
+          "usage": {
+            "input_tokens": 1030,
+            "output_tokens": 183
+          },
+          "request": {
+            "model": "jev-latest",
+            "state": {
+              "task": "Classify one social-media post for hateful, harassing, or dehumanizing content and recommend the safest handling. Classify the text only: do not identify, target, or write about any individual, and do not draft a reply.",
+              "post": {
+                "id": "synthetic-0003",
+                "text": "Maybe vermin is too strong a word, but you see my point about the Sunfield migrants."
+              },
+              "safety": [
+                "Never target, single out, or identify an individual person; judge the content, not people.",
+                "Prefer de-escalation and restore the humanity of any targeted group.",
+                "Never propose mass, automated, or coordinated replies. Any reply is reviewed by a human first.",
+                "When uncertain or when the stakes are high, say so through a flatter distribution."
+              ]
+            },
+            "questions": {
+              "hateful": {
+                "type": "noul",
+                "instructions": "Does this post contain hateful, harassing, or dehumanizing content? Answer with your true probability in [0, 1]. Classify only; do not target anyone."
+              },
+              "targets_protected_group": {
+                "type": "noul",
+                "instructions": "Does the post target a protected group rather than a private individual? Answer with your true probability in [0, 1]."
+              },
+              "has_slur": {
+                "type": "noul",
+                "instructions": "Does the post contain a slur or slur-like targeted epithet? Answer with your true probability in [0, 1]."
+              },
+              "severity": {
+                "type": "score",
+                "instructions": "How severe is the content? Return a probability distribution over the ordered criteria (1 = Not hateful.; 2 = Mild bias, no slur, no threat.; 3 = Clear hateful generalization or othering.; 4 = Slur or dehumanization, no explicit threat.; 5 = Explicit threat or call to violence.). Answer every criterion with your true probability.",
+                "criteria": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ]
+              },
+              "category": {
+                "type": "choice",
+                "instructions": "Which single category best describes the post? Classify the text; do not identify or target any individual.",
+                "criteria": {
+                  "none": "No hateful, harassing, or dehumanizing content.",
+                  "slur": "Contains a slur or slur-like targeted epithet.",
+                  "stereotype": "Asserts a negative generalization about a protected group.",
+                  "dehumanization": "Likens a protected group to animals, vermin, disease, or objects.",
+                  "othering": "Frames a protected group as alien, foreign, or not belonging.",
+                  "threat": "Calls for, encourages, or celebrates violence or harm."
+                }
+              },
+              "handling": {
+                "type": "choice",
+                "instructions": "What is the safest handling? Prefer de-escalation, never propose mass replies, and remember a human decides before any reply is sent.",
+                "criteria": {
+                  "ignore": "Do not engage; no reply and no report.",
+                  "report": "Route to platform trust-and-safety; do not reply publicly.",
+                  "reply": "A respectful counterspeech reply may be appropriate after human review.",
+                  "human_review": "Uncertain or high-stakes; a human must decide before any action."
+                }
+              }
+            }
+          }
+        }
+      },
+      "gate": {
+        "action": "report",
+        "reasons": [
+          "handling=report"
+        ],
+        "threshold": 0.65
+      },
+      "candidates": [],
+      "ranking": null,
+      "drafted": false,
+      "note": "handling=report"
+    },
+    {
+      "post_id": "synthetic-0004",
+      "text": "I would not use the word [SLUR], but that is basically what the Riverfolk are.",
+      "triage": {
+        "post_id": "synthetic-0004",
+        "hateful": 0.89,
+        "targets_protected_group": 0.79,
+        "has_slur": 0.75,
+        "severity_dist": {
+          "0": 0.01,
+          "1": 0.01,
+          "2": 0.13,
+          "3": 0.79,
+          "4": 0.06
+        },
+        "severity": 3.8800000000000003,
+        "category": "slur",
+        "category_probs": {
+          "none": 0.01,
+          "slur": 0.57,
+          "stereotype": 0.08,
+          "dehumanization": 0.26,
+          "othering": 0.08,
+          "threat": 0.0
+        },
+        "handling": "report",
+        "handling_probs": {
+          "ignore": 0.0,
+          "report": 0.76,
+          "reply": 0.0,
+          "human_review": 0.24
+        },
+        "confidence": 0.66,
+        "answers": {
+          "hateful": {
+            "type": "noul",
+            "noul": 0.89
+          },
+          "targets_protected_group": {
+            "type": "noul",
+            "noul": 0.79
+          },
+          "has_slur": {
+            "type": "noul",
+            "noul": 0.75
+          },
+          "severity": {
+            "type": "score",
+            "score": 2.89,
+            "confidence": 0.81,
+            "legend": {
+              "0": "1",
+              "1": "2",
+              "2": "3",
+              "3": "4",
+              "4": "5"
+            },
+            "probabilities": {
+              "0": 0.01,
+              "1": 0.01,
+              "2": 0.13,
+              "3": 0.79,
+              "4": 0.06
+            }
+          },
+          "category": {
+            "type": "choice",
+            "choice": "slur",
+            "confidence": 0.49,
+            "probabilities": {
+              "dehumanization": 0.26,
+              "othering": 0.08,
+              "threat": 0.0,
+              "none": 0.01,
+              "stereotype": 0.08,
+              "slur": 0.57
+            }
+          },
+          "handling": {
+            "type": "choice",
+            "choice": "report",
+            "confidence": 0.66,
+            "probabilities": {
+              "human_review": 0.24,
+              "ignore": 0.0,
+              "reply": 0.0,
+              "report": 0.76
+            }
+          }
+        },
+        "meta": {
+          "model": "jev-1.13.0",
+          "latency_ms": 181,
+          "usage": {
+            "input_tokens": 1030,
+            "output_tokens": 180
+          },
+          "request": {
+            "model": "jev-latest",
+            "state": {
+              "task": "Classify one social-media post for hateful, harassing, or dehumanizing content and recommend the safest handling. Classify the text only: do not identify, target, or write about any individual, and do not draft a reply.",
+              "post": {
+                "id": "synthetic-0004",
+                "text": "I would not use the word [SLUR], but that is basically what the Riverfolk are."
+              },
+              "safety": [
+                "Never target, single out, or identify an individual person; judge the content, not people.",
+                "Prefer de-escalation and restore the humanity of any targeted group.",
+                "Never propose mass, automated, or coordinated replies. Any reply is reviewed by a human first.",
+                "When uncertain or when the stakes are high, say so through a flatter distribution."
+              ]
+            },
+            "questions": {
+              "hateful": {
+                "type": "noul",
+                "instructions": "Does this post contain hateful, harassing, or dehumanizing content? Answer with your true probability in [0, 1]. Classify only; do not target anyone."
+              },
+              "targets_protected_group": {
+                "type": "noul",
+                "instructions": "Does the post target a protected group rather than a private individual? Answer with your true probability in [0, 1]."
+              },
+              "has_slur": {
+                "type": "noul",
+                "instructions": "Does the post contain a slur or slur-like targeted epithet? Answer with your true probability in [0, 1]."
+              },
+              "severity": {
+                "type": "score",
+                "instructions": "How severe is the content? Return a probability distribution over the ordered criteria (1 = Not hateful.; 2 = Mild bias, no slur, no threat.; 3 = Clear hateful generalization or othering.; 4 = Slur or dehumanization, no explicit threat.; 5 = Explicit threat or call to violence.). Answer every criterion with your true probability.",
+                "criteria": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ]
+              },
+              "category": {
+                "type": "choice",
+                "instructions": "Which single category best describes the post? Classify the text; do not identify or target any individual.",
+                "criteria": {
+                  "none": "No hateful, harassing, or dehumanizing content.",
+                  "slur": "Contains a slur or slur-like targeted epithet.",
+                  "stereotype": "Asserts a negative generalization about a protected group.",
+                  "dehumanization": "Likens a protected group to animals, vermin, disease, or objects.",
+                  "othering": "Frames a protected group as alien, foreign, or not belonging.",
+                  "threat": "Calls for, encourages, or celebrates violence or harm."
+                }
+              },
+              "handling": {
+                "type": "choice",
+                "instructions": "What is the safest handling? Prefer de-escalation, never propose mass replies, and remember a human decides before any reply is sent.",
+                "criteria": {
+                  "ignore": "Do not engage; no reply and no report.",
+                  "report": "Route to platform trust-and-safety; do not reply publicly.",
+                  "reply": "A respectful counterspeech reply may be appropriate after human review.",
+                  "human_review": "Uncertain or high-stakes; a human must decide before any action."
+                }
+              }
+            }
+          }
+        }
+      },
+      "gate": {
+        "action": "report",
+        "reasons": [
+          "handling=report"
+        ],
+        "threshold": 0.65
+      },
+      "candidates": [],
+      "ranking": null,
+      "drafted": false,
+      "note": "handling=report"
+    },
+    {
+      "post_id": "synthetic-0005",
+      "text": "I am not against immigration; I just think the Sunfield migrants should wait their turn.",
+      "triage": {
+        "post_id": "synthetic-0005",
+        "hateful": 0.28,
+        "targets_protected_group": 0.76,
+        "has_slur": 0.1,
+        "severity_dist": {
+          "0": 0.060000000000000005,
+          "1": 0.5700000000000001,
+          "2": 0.36000000000000004,
+          "3": 0.010000000000000002,
+          "4": 0.0
+        },
+        "severity": 2.3200000000000003,
+        "category": "othering",
+        "category_probs": {
+          "none": 0.21,
+          "slur": 0.0,
+          "stereotype": 0.05,
+          "dehumanization": 0.0,
+          "othering": 0.74,
+          "threat": 0.0
+        },
+        "handling": "ignore",
+        "handling_probs": {
+          "ignore": 0.42,
+          "report": 0.17,
+          "reply": 0.07,
+          "human_review": 0.34
+        },
+        "confidence": 0.22,
+        "answers": {
+          "hateful": {
+            "type": "noul",
+            "noul": 0.28
+          },
+          "targets_protected_group": {
+            "type": "noul",
+            "noul": 0.76
+          },
+          "has_slur": {
+            "type": "noul",
+            "noul": 0.1
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.32,
+            "confidence": 0.64,
+            "legend": {
+              "0": "1",
+              "1": "2",
+              "2": "3",
+              "3": "4",
+              "4": "5"
+            },
+            "probabilities": {
+              "0": 0.06,
+              "1": 0.57,
+              "2": 0.36,
+              "3": 0.01,
+              "4": 0.0
+            }
+          },
+          "category": {
+            "type": "choice",
+            "choice": "othering",
+            "confidence": 0.69,
+            "probabilities": {
+              "dehumanization": 0.0,
+              "stereotype": 0.05,
+              "threat": 0.0,
+              "slur": 0.0,
+              "othering": 0.74,
+              "none": 0.21
+            }
+          },
+          "handling": {
+            "type": "choice",
+            "choice": "ignore",
+            "confidence": 0.22,
+            "probabilities": {
+              "report": 0.17,
+              "reply": 0.07,
+              "human_review": 0.34,
+              "ignore": 0.42
+            }
+          }
+        },
+        "meta": {
+          "model": "jev-1.13.0",
+          "latency_ms": 260,
+          "usage": {
+            "input_tokens": 1028,
+            "output_tokens": 180
+          },
+          "request": {
+            "model": "jev-latest",
+            "state": {
+              "task": "Classify one social-media post for hateful, harassing, or dehumanizing content and recommend the safest handling. Classify the text only: do not identify, target, or write about any individual, and do not draft a reply.",
+              "post": {
+                "id": "synthetic-0005",
+                "text": "I am not against immigration; I just think the Sunfield migrants should wait their turn."
+              },
+              "safety": [
+                "Never target, single out, or identify an individual person; judge the content, not people.",
+                "Prefer de-escalation and restore the humanity of any targeted group.",
+                "Never propose mass, automated, or coordinated replies. Any reply is reviewed by a human first.",
+                "When uncertain or when the stakes are high, say so through a flatter distribution."
+              ]
+            },
+            "questions": {
+              "hateful": {
+                "type": "noul",
+                "instructions": "Does this post contain hateful, harassing, or dehumanizing content? Answer with your true probability in [0, 1]. Classify only; do not target anyone."
+              },
+              "targets_protected_group": {
+                "type": "noul",
+                "instructions": "Does the post target a protected group rather than a private individual? Answer with your true probability in [0, 1]."
+              },
+              "has_slur": {
+                "type": "noul",
+                "instructions": "Does the post contain a slur or slur-like targeted epithet? Answer with your true probability in [0, 1]."
+              },
+              "severity": {
+                "type": "score",
+                "instructions": "How severe is the content? Return a probability distribution over the ordered criteria (1 = Not hateful.; 2 = Mild bias, no slur, no threat.; 3 = Clear hateful generalization or othering.; 4 = Slur or dehumanization, no explicit threat.; 5 = Explicit threat or call to violence.). Answer every criterion with your true probability.",
+                "criteria": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ]
+              },
+              "category": {
+                "type": "choice",
+                "instructions": "Which single category best describes the post? Classify the text; do not identify or target any individual.",
+                "criteria": {
+                  "none": "No hateful, harassing, or dehumanizing content.",
+                  "slur": "Contains a slur or slur-like targeted epithet.",
+                  "stereotype": "Asserts a negative generalization about a protected group.",
+                  "dehumanization": "Likens a protected group to animals, vermin, disease, or objects.",
+                  "othering": "Frames a protected group as alien, foreign, or not belonging.",
+                  "threat": "Calls for, encourages, or celebrates violence or harm."
+                }
+              },
+              "handling": {
+                "type": "choice",
+                "instructions": "What is the safest handling? Prefer de-escalation, never propose mass replies, and remember a human decides before any reply is sent.",
+                "criteria": {
+                  "ignore": "Do not engage; no reply and no report.",
+                  "report": "Route to platform trust-and-safety; do not reply publicly.",
+                  "reply": "A respectful counterspeech reply may be appropriate after human review.",
+                  "human_review": "Uncertain or high-stakes; a human must decide before any action."
+                }
+              }
+            }
+          }
+        }
+      },
+      "gate": {
+        "action": "human_review",
+        "reasons": [
+          "confidence 0.22 < threshold 0.65"
+        ],
+        "threshold": 0.65
+      },
+      "candidates": [],
+      "ranking": null,
+      "drafted": false,
+      "note": "confidence 0.22 < threshold 0.65"
+    },
+    {
+      "post_id": "synthetic-0006",
+      "text": "I have no problem with Group A, as long as they remember where they are.",
+      "triage": {
+        "post_id": "synthetic-0006",
+        "hateful": 0.7,
+        "targets_protected_group": 0.85,
+        "has_slur": 0.1,
+        "severity_dist": {
+          "0": 0.02,
+          "1": 0.17,
+          "2": 0.76,
+          "3": 0.05,
+          "4": 0.0
+        },
+        "severity": 2.8400000000000003,
+        "category": "othering",
+        "category_probs": {
+          "none": 0.02,
+          "slur": 0.0,
+          "stereotype": 0.06,
+          "dehumanization": 0.0,
+          "othering": 0.92,
+          "threat": 0.0
+        },
+        "handling": "report",
+        "handling_probs": {
+          "ignore": 0.04,
+          "report": 0.56,
+          "reply": 0.01,
+          "human_review": 0.39
+        },
+        "confidence": 0.41,
+        "answers": {
+          "hateful": {
+            "type": "noul",
+            "noul": 0.7
+          },
+          "targets_protected_group": {
+            "type": "noul",
+            "noul": 0.85
+          },
+          "has_slur": {
+            "type": "noul",
+            "noul": 0.1
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.85,
+            "confidence": 0.78,
+            "legend": {
+              "0": "1",
+              "1": "2",
+              "2": "3",
+              "3": "4",
+              "4": "5"
+            },
+            "probabilities": {
+              "0": 0.02,
+              "1": 0.17,
+              "2": 0.76,
+              "3": 0.05,
+              "4": 0.0
+            }
+          },
+          "category": {
+            "type": "choice",
+            "choice": "othering",
+            "confidence": 0.9,
+            "probabilities": {
+              "othering": 0.92,
+              "stereotype": 0.06,
+              "threat": 0.0,
+              "none": 0.02,
+              "slur": 0.0,
+              "dehumanization": 0.0
+            }
+          },
+          "handling": {
+            "type": "choice",
+            "choice": "report",
+            "confidence": 0.41,
+            "probabilities": {
+              "human_review": 0.39,
+              "ignore": 0.04,
+              "report": 0.56,
+              "reply": 0.01
+            }
+          }
+        },
+        "meta": {
+          "model": "jev-1.13.0",
+          "latency_ms": 194,
+          "usage": {
+            "input_tokens": 1026,
+            "output_tokens": 180
+          },
+          "request": {
+            "model": "jev-latest",
+            "state": {
+              "task": "Classify one social-media post for hateful, harassing, or dehumanizing content and recommend the safest handling. Classify the text only: do not identify, target, or write about any individual, and do not draft a reply.",
+              "post": {
+                "id": "synthetic-0006",
+                "text": "I have no problem with Group A, as long as they remember where they are."
+              },
+              "safety": [
+                "Never target, single out, or identify an individual person; judge the content, not people.",
+                "Prefer de-escalation and restore the humanity of any targeted group.",
+                "Never propose mass, automated, or coordinated replies. Any reply is reviewed by a human first.",
+                "When uncertain or when the stakes are high, say so through a flatter distribution."
+              ]
+            },
+            "questions": {
+              "hateful": {
+                "type": "noul",
+                "instructions": "Does this post contain hateful, harassing, or dehumanizing content? Answer with your true probability in [0, 1]. Classify only; do not target anyone."
+              },
+              "targets_protected_group": {
+                "type": "noul",
+                "instructions": "Does the post target a protected group rather than a private individual? Answer with your true probability in [0, 1]."
+              },
+              "has_slur": {
+                "type": "noul",
+                "instructions": "Does the post contain a slur or slur-like targeted epithet? Answer with your true probability in [0, 1]."
+              },
+              "severity": {
+                "type": "score",
+                "instructions": "How severe is the content? Return a probability distribution over the ordered criteria (1 = Not hateful.; 2 = Mild bias, no slur, no threat.; 3 = Clear hateful generalization or othering.; 4 = Slur or dehumanization, no explicit threat.; 5 = Explicit threat or call to violence.). Answer every criterion with your true probability.",
+                "criteria": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ]
+              },
+              "category": {
+                "type": "choice",
+                "instructions": "Which single category best describes the post? Classify the text; do not identify or target any individual.",
+                "criteria": {
+                  "none": "No hateful, harassing, or dehumanizing content.",
+                  "slur": "Contains a slur or slur-like targeted epithet.",
+                  "stereotype": "Asserts a negative generalization about a protected group.",
+                  "dehumanization": "Likens a protected group to animals, vermin, disease, or objects.",
+                  "othering": "Frames a protected group as alien, foreign, or not belonging.",
+                  "threat": "Calls for, encourages, or celebrates violence or harm."
+                }
+              },
+              "handling": {
+                "type": "choice",
+                "instructions": "What is the safest handling? Prefer de-escalation, never propose mass replies, and remember a human decides before any reply is sent.",
+                "criteria": {
+                  "ignore": "Do not engage; no reply and no report.",
+                  "report": "Route to platform trust-and-safety; do not reply publicly.",
+                  "reply": "A respectful counterspeech reply may be appropriate after human review.",
+                  "human_review": "Uncertain or high-stakes; a human must decide before any action."
+                }
+              }
+            }
+          }
+        }
+      },
+      "gate": {
+        "action": "human_review",
+        "reasons": [
+          "confidence 0.41 < threshold 0.65"
+        ],
+        "threshold": 0.65
+      },
+      "candidates": [],
+      "ranking": null,
+      "drafted": false,
+      "note": "confidence 0.41 < threshold 0.65"
+    },
+    {
+      "post_id": "synthetic-0007",
+      "text": "I mean it. Of course a [SLUR] like that would say something so stupid.",
+      "triage": {
+        "post_id": "synthetic-0007",
+        "hateful": 0.93,
+        "targets_protected_group": 0.88,
+        "has_slur": 0.91,
+        "severity_dist": {
+          "0": 0.01,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.93,
+          "4": 0.03
+        },
+        "severity": 3.9600000000000004,
+        "category": "slur",
+        "category_probs": {
+          "none": 0.0,
+          "slur": 0.92,
+          "stereotype": 0.08,
+          "dehumanization": 0.0,
+          "othering": 0.0,
+          "threat": 0.0
+        },
+        "handling": "report",
+        "handling_probs": {
+          "ignore": 0.0,
+          "report": 0.87,
+          "reply": 0.0,
+          "human_review": 0.13
+        },
+        "confidence": 0.82,
+        "answers": {
+          "hateful": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "targets_protected_group": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "has_slur": {
+            "type": "noul",
+            "noul": 0.91
+          },
+          "severity": {
+            "type": "score",
+            "score": 2.96,
+            "confidence": 0.92,
+            "legend": {
+              "0": "1",
+              "1": "2",
+              "2": "3",
+              "3": "4",
+              "4": "5"
+            },
+            "probabilities": {
+              "0": 0.01,
+              "1": 0.01,
+              "2": 0.02,
+              "3": 0.93,
+              "4": 0.03
+            }
+          },
+          "category": {
+            "type": "choice",
+            "choice": "slur",
+            "confidence": 0.9,
+            "probabilities": {
+              "othering": 0.0,
+              "dehumanization": 0.0,
+              "slur": 0.92,
+              "none": 0.0,
+              "stereotype": 0.08,
+              "threat": 0.0
+            }
+          },
+          "handling": {
+            "type": "choice",
+            "choice": "report",
+            "confidence": 0.82,
+            "probabilities": {
+              "ignore": 0.0,
+              "reply": 0.0,
+              "human_review": 0.13,
+              "report": 0.87
+            }
+          }
+        },
+        "meta": {
+          "model": "jev-1.13.0",
+          "latency_ms": 206,
+          "usage": {
+            "input_tokens": 1028,
+            "output_tokens": 180
+          },
+          "request": {
+            "model": "jev-latest",
+            "state": {
+              "task": "Classify one social-media post for hateful, harassing, or dehumanizing content and recommend the safest handling. Classify the text only: do not identify, target, or write about any individual, and do not draft a reply.",
+              "post": {
+                "id": "synthetic-0007",
+                "text": "I mean it. Of course a [SLUR] like that would say something so stupid."
+              },
+              "safety": [
+                "Never target, single out, or identify an individual person; judge the content, not people.",
+                "Prefer de-escalation and restore the humanity of any targeted group.",
+                "Never propose mass, automated, or coordinated replies. Any reply is reviewed by a human first.",
+                "When uncertain or when the stakes are high, say so through a flatter distribution."
+              ]
+            },
+            "questions": {
+              "hateful": {
+                "type": "noul",
+                "instructions": "Does this post contain hateful, harassing, or dehumanizing content? Answer with your true probability in [0, 1]. Classify only; do not target anyone."
+              },
+              "targets_protected_group": {
+                "type": "noul",
+                "instructions": "Does the post target a protected group rather than a private individual? Answer with your true probability in [0, 1]."
+              },
+              "has_slur": {
+                "type": "noul",
+                "instructions": "Does the post contain a slur or slur-like targeted epithet? Answer with your true probability in [0, 1]."
+              },
+              "severity": {
+                "type": "score",
+                "instructions": "How severe is the content? Return a probability distribution over the ordered criteria (1 = Not hateful.; 2 = Mild bias, no slur, no threat.; 3 = Clear hateful generalization or othering.; 4 = Slur or dehumanization, no explicit threat.; 5 = Explicit threat or call to violence.). Answer every criterion with your true probability.",
+                "criteria": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ]
+              },
+              "category": {
+                "type": "choice",
+                "instructions": "Which single category best describes the post? Classify the text; do not identify or target any individual.",
+                "criteria": {
+                  "none": "No hateful, harassing, or dehumanizing content.",
+                  "slur": "Contains a slur or slur-like targeted epithet.",
+                  "stereotype": "Asserts a negative generalization about a protected group.",
+                  "dehumanization": "Likens a protected group to animals, vermin, disease, or objects.",
+                  "othering": "Frames a protected group as alien, foreign, or not belonging.",
+                  "threat": "Calls for, encourages, or celebrates violence or harm."
+                }
+              },
+              "handling": {
+                "type": "choice",
+                "instructions": "What is the safest handling? Prefer de-escalation, never propose mass replies, and remember a human decides before any reply is sent.",
+                "criteria": {
+                  "ignore": "Do not engage; no reply and no report.",
+                  "report": "Route to platform trust-and-safety; do not reply publicly.",
+                  "reply": "A respectful counterspeech reply may be appropriate after human review.",
+                  "human_review": "Uncertain or high-stakes; a human must decide before any action."
+                }
+              }
+            }
+          }
+        }
+      },
+      "gate": {
+        "action": "report",
+        "reasons": [
+          "handling=report"
+        ],
+        "threshold": 0.65
+      },
+      "candidates": [],
+      "ranking": null,
+      "drafted": false,
+      "note": "handling=report"
+    },
+    {
+      "post_id": "synthetic-0008",
+      "text": "No offense to the Vale settlers, but I would rather not have them as neighbors.",
+      "triage": {
+        "post_id": "synthetic-0008",
+        "hateful": 0.41,
+        "targets_protected_group": 0.43,
+        "has_slur": 0.07,
+        "severity_dist": {
+          "0": 0.05,
+          "1": 0.46,
+          "2": 0.48,
+          "3": 0.01,
+          "4": 0.0
+        },
+        "severity": 2.45,
+        "category": "othering",
+        "category_probs": {
+          "none": 0.21,
+          "slur": 0.0,
+          "stereotype": 0.05,
+          "dehumanization": 0.0,
+          "othering": 0.74,
+          "threat": 0.0
+        },
+        "handling": "report",
+        "handling_probs": {
+          "ignore": 0.26,
+          "report": 0.36,
+          "reply": 0.04,
+          "human_review": 0.34
+        },
+        "confidence": 0.15,
+        "answers": {
+          "hateful": {
+            "type": "noul",
+            "noul": 0.41
+          },
+          "targets_protected_group": {
+            "type": "noul",
+            "noul": 0.43
+          },
+          "has_slur": {
+            "type": "noul",
+            "noul": 0.07
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.47,
+            "confidence": 0.53,
+            "legend": {
+              "0": "1",
+              "1": "2",
+              "2": "3",
+              "3": "4",
+              "4": "5"
+            },
+            "probabilities": {
+              "0": 0.05,
+              "1": 0.46,
+              "2": 0.48,
+              "3": 0.01,
+              "4": 0.0
+            }
+          },
+          "category": {
+            "type": "choice",
+            "choice": "othering",
+            "confidence": 0.68,
+            "probabilities": {
+              "stereotype": 0.05,
+              "dehumanization": 0.0,
+              "threat": 0.0,
+              "slur": 0.0,
+              "none": 0.21,
+              "othering": 0.74
+            }
+          },
+          "handling": {
+            "type": "choice",
+            "choice": "report",
+            "confidence": 0.15,
+            "probabilities": {
+              "human_review": 0.34,
+              "report": 0.36,
+              "reply": 0.04,
+              "ignore": 0.26
+            }
+          }
+        },
+        "meta": {
+          "model": "jev-1.13.0",
+          "latency_ms": 182,
+          "usage": {
+            "input_tokens": 1026,
+            "output_tokens": 180
+          },
+          "request": {
+            "model": "jev-latest",
+            "state": {
+              "task": "Classify one social-media post for hateful, harassing, or dehumanizing content and recommend the safest handling. Classify the text only: do not identify, target, or write about any individual, and do not draft a reply.",
+              "post": {
+                "id": "synthetic-0008",
+                "text": "No offense to the Vale settlers, but I would rather not have them as neighbors."
+              },
+              "safety": [
+                "Never target, single out, or identify an individual person; judge the content, not people.",
+                "Prefer de-escalation and restore the humanity of any targeted group.",
+                "Never propose mass, automated, or coordinated replies. Any reply is reviewed by a human first.",
+                "When uncertain or when the stakes are high, say so through a flatter distribution."
+              ]
+            },
+            "questions": {
+              "hateful": {
+                "type": "noul",
+                "instructions": "Does this post contain hateful, harassing, or dehumanizing content? Answer with your true probability in [0, 1]. Classify only; do not target anyone."
+              },
+              "targets_protected_group": {
+                "type": "noul",
+                "instructions": "Does the post target a protected group rather than a private individual? Answer with your true probability in [0, 1]."
+              },
+              "has_slur": {
+                "type": "noul",
+                "instructions": "Does the post contain a slur or slur-like targeted epithet? Answer with your true probability in [0, 1]."
+              },
+              "severity": {
+                "type": "score",
+                "instructions": "How severe is the content? Return a probability distribution over the ordered criteria (1 = Not hateful.; 2 = Mild bias, no slur, no threat.; 3 = Clear hateful generalization or othering.; 4 = Slur or dehumanization, no explicit threat.; 5 = Explicit threat or call to violence.). Answer every criterion with your true probability.",
+                "criteria": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ]
+              },
+              "category": {
+                "type": "choice",
+                "instructions": "Which single category best describes the post? Classify the text; do not identify or target any individual.",
+                "criteria": {
+                  "none": "No hateful, harassing, or dehumanizing content.",
+                  "slur": "Contains a slur or slur-like targeted epithet.",
+                  "stereotype": "Asserts a negative generalization about a protected group.",
+                  "dehumanization": "Likens a protected group to animals, vermin, disease, or objects.",
+                  "othering": "Frames a protected group as alien, foreign, or not belonging.",
+                  "threat": "Calls for, encourages, or celebrates violence or harm."
+                }
+              },
+              "handling": {
+                "type": "choice",
+                "instructions": "What is the safest handling? Prefer de-escalation, never propose mass replies, and remember a human decides before any reply is sent.",
+                "criteria": {
+                  "ignore": "Do not engage; no reply and no report.",
+                  "report": "Route to platform trust-and-safety; do not reply publicly.",
+                  "reply": "A respectful counterspeech reply may be appropriate after human review.",
+                  "human_review": "Uncertain or high-stakes; a human must decide before any action."
+                }
+              }
+            }
+          }
+        }
+      },
+      "gate": {
+        "action": "human_review",
+        "reasons": [
+          "confidence 0.15 < threshold 0.65"
+        ],
+        "threshold": 0.65
+      },
+      "candidates": [],
+      "ranking": null,
+      "drafted": false,
+      "note": "confidence 0.15 < threshold 0.65"
+    },
+    {
+      "post_id": "synthetic-0009",
+      "text": "Look. The weekend forecast looks great for the festival downtown.",
+      "triage": {
+        "post_id": "synthetic-0009",
+        "hateful": 0.01,
+        "targets_protected_group": 0.01,
+        "has_slur": 0.01,
+        "severity_dist": {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0
+        },
+        "severity": 1.0,
+        "category": "none",
+        "category_probs": {
+          "none": 1.0,
+          "slur": 0.0,
+          "stereotype": 0.0,
+          "dehumanization": 0.0,
+          "othering": 0.0,
+          "threat": 0.0
+        },
+        "handling": "ignore",
+        "handling_probs": {
+          "ignore": 1.0,
+          "report": 0.0,
+          "reply": 0.0,
+          "human_review": 0.0
+        },
+        "confidence": 1.0,
+        "answers": {
+          "hateful": {
+            "type": "noul",
+            "noul": 0.01
+          },
+          "targets_protected_group": {
+            "type": "noul",
+            "noul": 0.01
+          },
+          "has_slur": {
+            "type": "noul",
+            "noul": 0.01
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.01,
+            "confidence": 0.99,
+            "legend": {
+              "0": "1",
+              "1": "2",
+              "2": "3",
+              "3": "4",
+              "4": "5"
+            },
+            "probabilities": {
+              "0": 1.0,
+              "1": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0
+            }
+          },
+          "category": {
+            "type": "choice",
+            "choice": "none",
+            "confidence": 1.0,
+            "probabilities": {
+              "threat": 0.0,
+              "othering": 0.0,
+              "dehumanization": 0.0,
+              "slur": 0.0,
+              "stereotype": 0.0,
+              "none": 1.0
+            }
+          },
+          "handling": {
+            "type": "choice",
+            "choice": "ignore",
+            "confidence": 1.0,
+            "probabilities": {
+              "reply": 0.0,
+              "ignore": 1.0,
+              "report": 0.0,
+              "human_review": 0.0
+            }
+          }
+        },
+        "meta": {
+          "model": "jev-1.13.0",
+          "latency_ms": 146,
+          "usage": {
+            "input_tokens": 1021,
+            "output_tokens": 179
+          },
+          "request": {
+            "model": "jev-latest",
+            "state": {
+              "task": "Classify one social-media post for hateful, harassing, or dehumanizing content and recommend the safest handling. Classify the text only: do not identify, target, or write about any individual, and do not draft a reply.",
+              "post": {
+                "id": "synthetic-0009",
+                "text": "Look. The weekend forecast looks great for the festival downtown."
+              },
+              "safety": [
+                "Never target, single out, or identify an individual person; judge the content, not people.",
+                "Prefer de-escalation and restore the humanity of any targeted group.",
+                "Never propose mass, automated, or coordinated replies. Any reply is reviewed by a human first.",
+                "When uncertain or when the stakes are high, say so through a flatter distribution."
+              ]
+            },
+            "questions": {
+              "hateful": {
+                "type": "noul",
+                "instructions": "Does this post contain hateful, harassing, or dehumanizing content? Answer with your true probability in [0, 1]. Classify only; do not target anyone."
+              },
+              "targets_protected_group": {
+                "type": "noul",
+                "instructions": "Does the post target a protected group rather than a private individual? Answer with your true probability in [0, 1]."
+              },
+              "has_slur": {
+                "type": "noul",
+                "instructions": "Does the post contain a slur or slur-like targeted epithet? Answer with your true probability in [0, 1]."
+              },
+              "severity": {
+                "type": "score",
+                "instructions": "How severe is the content? Return a probability distribution over the ordered criteria (1 = Not hateful.; 2 = Mild bias, no slur, no threat.; 3 = Clear hateful generalization or othering.; 4 = Slur or dehumanization, no explicit threat.; 5 = Explicit threat or call to violence.). Answer every criterion with your true probability.",
+                "criteria": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ]
+              },
+              "category": {
+                "type": "choice",
+                "instructions": "Which single category best describes the post? Classify the text; do not identify or target any individual.",
+                "criteria": {
+                  "none": "No hateful, harassing, or dehumanizing content.",
+                  "slur": "Contains a slur or slur-like targeted epithet.",
+                  "stereotype": "Asserts a negative generalization about a protected group.",
+                  "dehumanization": "Likens a protected group to animals, vermin, disease, or objects.",
+                  "othering": "Frames a protected group as alien, foreign, or not belonging.",
+                  "threat": "Calls for, encourages, or celebrates violence or harm."
+                }
+              },
+              "handling": {
+                "type": "choice",
+                "instructions": "What is the safest handling? Prefer de-escalation, never propose mass replies, and remember a human decides before any reply is sent.",
+                "criteria": {
+                  "ignore": "Do not engage; no reply and no report.",
+                  "report": "Route to platform trust-and-safety; do not reply publicly.",
+                  "reply": "A respectful counterspeech reply may be appropriate after human review.",
+                  "human_review": "Uncertain or high-stakes; a human must decide before any action."
+                }
+              }
+            }
+          }
+        }
+      },
+      "gate": {
+        "action": "ignore",
+        "reasons": [
+          "handling=ignore"
+        ],
+        "threshold": 0.65
+      },
+      "candidates": [],
+      "ranking": null,
+      "drafted": false,
+      "note": "handling=ignore"
+    }
+  ]
+}

@@ -211,6 +211,24 @@ additionally asserts the pipeline never calls drafting or ranking for any refuse
 capability, that the outbox handler performs no socket I/O, and that the server refuses to
 bind a non-loopback host.
 
+## Live evidence
+
+A single live run was made with a real TypeSafe key (resolved at runtime, never written or
+logged) and committed under [`results/live/`](results/live/):
+
+```bash
+uv run jev-counterspeech --live --limit 10 --seed 7 --results-dir results/live
+```
+
+Observed: live Jev routed **all 10** sample posts to non-draft actions
+(`human_review=5, report=3, ignore=2, draft=0`), so no reply was drafted or ranked. That is the
+gate doing its job, not a missing feature: on this small, deliberately harsh sample, live Jev
+found nothing it was confident enough to propose text for. The live headline calibration
+(Brier **0.2401**, ECE **0.3540**, n=10) is a **tiny, noisy sample** and is included only as
+evidence the live path works — the offline `calibrated` run over 120 examples is the
+meaningful calibration measurement. `results/live/report.json` contains the raw per-post
+answers; no key or `Authorization` material is present.
+
 ## Safety rails / responsible use
 
 Guarantees, each enforced in code:
