@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jev-counterspeech · local review</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">JEV<span>·</span>COUNTERSPEECH</div>
+      <div class="meta" id="meta"></div>
+      <div class="headline-calib">
+        <span class="stat"><label>Brier</label><b id="brier">–</b></span>
+        <span class="stat"><label>ECE</label><b id="ece">–</b></span>
+      </div>
+    </header>
+
+    <div class="banner" role="note">
+      <b>Local review only</b> — nothing is posted anywhere. “Send” writes to
+      <code>results/outbox.jsonl</code> on this machine. There is no network call.
+    </div>
+
+    <section class="gatecounts" id="gatecounts" aria-label="Gate decision counts"></section>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="panel-head">
+          <h2>Posts</h2>
+          <span class="badge" id="post-count">0</span>
+        </div>
+        <div class="post-list" id="post-list"></div>
+      </aside>
+
+      <section class="detail" id="detail">
+        <p class="empty">Select a post to inspect Jev’s triage, gate decision, and drafts.</p>
+      </section>
+    </main>
+
+    <section class="calibration-panel">
+      <div class="panel-head">
+        <h2>Calibration</h2>
+        <span class="muted">Jev’s probabilities against the offline stub’s labels</span>
+      </div>
+      <div id="reliability-wrap"></div>
+    </section>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

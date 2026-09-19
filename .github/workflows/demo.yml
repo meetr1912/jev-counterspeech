@@ -1,0 +1,49 @@
+# Demo
+#
+# Runs entirely offline: no API keys, no tokens, no paid model calls. The real Jev
+# path requires TYPESAFE_API_KEY and is never run in CI. `--offline` forces the
+# deterministic local judge, so this workflow never reads that variable even if it
+# happens to be present in the environment.
+
+name: Demo
+
+on:
+  push:
+    branches: ["**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: demo-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  demo:
+    name: offline demo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: uv sync --dev
+
+      - name: Run offline demo
+        run: uv run jev-counterspeech --offline --limit 24 --seed 7 --results-dir results
+
+      - name: Show report
+        run: cat results/REPORT.md
+
+      - name: Upload report
+        uses: actions/upload-artifact@v5
+        with:
+          name: demo-${{ github.sha }}
+          path: results/
+          if-no-files-found: error
